@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coup de Food - Restaurant Healthy & Gourmand</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Coup de Food" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#home" onclick="scrollToSection('home')">Accueil</a>
+                <a href="#bagels" onclick="scrollToSection('bagels')">Bagels</a>
+                <a href="#sandwiches" onclick="scrollToSection('sandwiches')">Sandwiches</a>
+                <a href="#toasts" onclick="scrollToSection('toasts')">Toasts</a>
+                <a href="#salades" onclick="scrollToSection('salades')">Salades</a>
+                <a href="#desserts" onclick="scrollToSection('desserts')">Desserts</a>
+                <a href="#boissons" onclick="scrollToSection('boissons')">Boissons</a>
+                <button onclick="showAdminPanel()" class="admin-btn">Admin</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="assets/images/bagel-recovery.jpg" alt="Bagels">
+                <div class="carousel-content">
+                    <h2>Nos Bagels Signature</h2>
+                    <p>Des créations uniques pour tous les goûts</p>
+                    <button onclick="scrollToSection('bagels')" class="btn-discover">Découvrir</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/sandwich-spicy-chicken.jpg" alt="Sandwiches">
+                <div class="carousel-content">
+                    <h2>Sandwiches Gourmets</h2>
+                    <p>L'art du sandwich revisité</p>
+                    <button onclick="scrollToSection('sandwiches')" class="btn-discover">Découvrir</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/salad-high-protein.jpg" alt="Salades">
+                <div class="carousel-content">
+                    <h2>Salades Énergisantes</h2>
+                    <p>Fraîcheur et vitalité dans chaque bouchée</p>
+                    <button onclick="scrollToSection('salades')" class="btn-discover">Découvrir</button>
+                </div>
+            </div>
+            
+            <button class="carousel-prev" onclick="prevSlide()">❮</button>
+            <button class="carousel-next" onclick="nextSlide()">❯</button>
+            
+            <div class="carousel-indicators">
+                <span class="carousel-indicator active" onclick="goToSlide(0)"></span>
+                <span class="carousel-indicator" onclick="goToSlide(1)"></span>
+                <span class="carousel-indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Coup de Food</h1>
+            <p class="hero-subtitle">Restaurant Healthy & Gourmand</p>
+            <p class="hero-description">
+                Découvrez notre cuisine saine et savoureuse, où chaque plat est préparé avec passion 
+                et des ingrédients de qualité. Une expérience culinaire unique vous attend !
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Présentation -->
+    <section class="presentation">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Recettes Healthy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5★</span>
+                    <span class="stat-label">Satisfaction Client</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Fresh</span>
+                    <span class="stat-label">Ingrédients Quotidiens</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Bagels -->
+    <section id="bagels" class="menu-section bagel-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🥯</span>
+                <h2>Bagels</h2>
+                <p>Nos bagels signature, préparés avec amour</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Sandwiches -->
+    <section id="sandwiches" class="menu-section sandwich-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🥪</span>
+                <h2>Sandwiches</h2>
+                <p>L'art du sandwich revisité avec des ingrédients premium</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Toasts -->
+    <section id="toasts" class="menu-section toast-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🍞</span>
+                <h2>Toasts</h2>
+                <p>Des toasts créatifs pour tous les moments</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Salades -->
+    <section id="salades" class="menu-section salad-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🥗</span>
+                <h2>Salades</h2>
+                <p>Fraîcheur et saveurs dans chaque bouchée</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Desserts -->
+    <section id="desserts" class="menu-section dessert-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🍰</span>
+                <h2>Desserts</h2>
+                <p>Des douceurs healthy pour terminer en beauté</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Boissons -->
+    <section id="boissons" class="menu-section drink-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-icon">🥤</span>
+                <h2>Boissons</h2>
+                <p>Smoothies et jus frais pour vous rafraîchir</p>
+            </div>
+            <div class="dishes-grid">
+                <!-- Les plats seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Coup de Food</h3>
+                    <p>Restaurant healthy & gourmand</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +225 07 08 30 51 00</p>
+                    <p>📧 coupdefoodci@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horaires</h4>
+                    <p>Mar - Ven : 11h - 23h</p>
+                    <p>Sam - Dim : 11h - 23h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coup de Food. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Configuration et données
+        const ADMIN_PASSWORD = 'coupdefood2024';
+        let isAdminLoggedIn = false;
+        let currentSlide = 0;
+        let slideInterval;
+        let cart = [];
+
+        // Données du menu avec le nouveau menu fourni
+        let menuData = {
+            bagels: [
+                {
+                    id: 1,
+                    name: "Le Recovery",
+                    ingredients: "Poulet / Guacamole onctueux / Emmental / Tomate séchée / Confit d'oignons / Laitue / Moutarde Miel",
+                    calories: 530,
+                    proteins: 31.7,
+                    price: 7500,
+                    image: "assets/images/bagel-recovery.jpg"
+                },
+                {
+                    id: 2,
+                    name: "Le Protéin Duo",
+                    ingredients: "Bagel protéiné avec double portion de protéines",
+                    calories: 537,
+                    proteins: 35.5,
+                    price: 9000,
+                    image: "assets/images/bagel-protein.jpg"
+                },
+                {
+                    id: 3,
+                    name: "Le Salmon Fit",
+                    ingredients: "Saumon / Avocat / Câpres / Cream cheese / Roquette",
+                    calories: 505,
+                    proteins: 20.2,
+                    price: 8500,
+                    image: "assets/images/bagel-salmon-fit.jpg"
+                },
+                {
+                    id: 4,
+                    name: "Le Tuna Boost",
+                    ingredients: "Thon / Avocat / Légumes croquants / Sauce spéciale",
+                    calories: 408,
+                    proteins: 17,
+                    price: 7000,
+                    image: "assets/images/bagel-Tuna.jpg"
+                },
+                {
+                    id: 5,
+                    name: "Le Green Mozza",
+                    ingredients: "Mozzarella / Pesto / Tomate séchée / Olive noire / Roquette",
+                    calories: 555,
+                    proteins: 15.9,
+                    price: 7500,
+                    image: "assets/images/bagel-green-mozza.jpg"
+                },
+                {
+                    id: 6,
+                    name: "Le Goat Energy",
+                    ingredients: "Chèvre frais / Pomme / Tomate séchée / Noix de pécan / Miel / Roquette",
+                    calories: 452,
+                    proteins: 13.5,
+                    price: 7000,
+                    image: "assets/images/bagel-goat-energy.jpg"
+                }
+            ],
+            sandwiches: [
+                {
+                    id: 7,
+                    name: "Classic Basterma",
+                    ingredients: "Basterma / Copeaux de parmesan / Roquette / Tomate / Sauce blanche light",
+                    calories: 450,
+                    proteins: 25,
+                    price: 8000,
+                    image: "assets/images/sandwich-basterma.jpg"
+                },
+                {
+                    id: 8,
+                    name: "Bufala Turkey",
+                    ingredients: "Bufala / Dinde fumée / Roquette / Tomate / Pesto",
+                    calories: 420,
+                    proteins: 28,
+                    price: 7500,
+                    image: "assets/images/sandwich-bufala-turkey.jpg"
+                },
+                {
+                    id: 9,
+                    name: "Spicy Chicken",
+                    ingredients: "Effiloché de poulet épicé / Roquette / Guacamole",
+                    calories: 480,
+                    proteins: 32,
+                    price: 7500,
+                    image: "assets/images/sandwich-spicy-chicken.jpg"
+                },
+                {
+                    id: 10,
+                    name: "Tuna Jalapeno",
+                    ingredients: "Thon mix / Jalapeno / Laitue",
+                    calories: 380,
+                    proteins: 22,
+                    price: 7000,
+                    image: "assets/images/sandwich-tuna-jalapeno.jpg"
+                },
+                {
+                    id: 11,
+                    name: "Halloumi",
+                    ingredients: "Halloumi / Tomate / Concombre / Pesto",
+                    calories: 390,
+                    proteins: 18,
+                    price: 7000,
+                    image: "assets/images/sandwich-halloumi.webp"
+                }
+            ],
+            salades: [
+                {
+                    id: 12,
+                    name: "Goat Boost",
+                    ingredients: "Roquette / Mesclun / Iceberg / Boules de chèvre enrobées de pistache et de graine de chia / Figue séchée / Fraise / Fruit du dragon / Graine de Courge / Granola / Noix de pécan / Pomme",
+                    calories: 425,
+                    proteins: 15,
+                    price: 12500,
+                    image: "assets/images/salad-goat-boost.jpg"
+                },
+                {
+                    id: 13,
+                    name: "High Protein",
+                    ingredients: "Iceberg / Epinards / Avocat / Jambon de dinde fumé / Poulet / Halloumi / Canneberge séchée / Concombre / Edamame / Noix de pécan",
+                    calories: 886,
+                    proteins: 45,
+                    price: 13500,
+                    image: "assets/images/salad-high-protein.jpg"
+                },
+                {
+                    id: 14,
+                    name: "Tex-Mex",
+                    ingredients: "Effiloché de poulet épicé / Roquette / Mesclun / Iceberg / Avocat / Carotte râpée / Cheddar / Coriandre / Maïs / Jalapeno / Poivron confit / Tortilla chips",
+                    calories: 404,
+                    proteins: 28,
+                    price: 13000,
+                    image: "assets/images/salad-tex-mex.jpg"
+                },
+                {
+                    id: 15,
+                    name: "Feta Quinoa",
+                    ingredients: "Quinoa / Roquette / Iceberg / Avocat / Concombre / Menthe / Feta / Grenade / Noix de cajou / Olive noire / Pistache / Tomate cerise",
+                    calories: 531,
+                    proteins: 20,
+                    price: 12000,
+                    image: "assets/images/salad-feta-quinoa.jpg"
+                },
+                {
+                    id: 16,
+                    name: "Tuna Pasta",
+                    ingredients: "Pâte fusilli / Thon / Olive noire / Halloumi / Avocat / Mesclun / Maïs / Anchois",
+                    calories: 520,
+                    proteins: 25,
+                    price: 11500,
+                    image: "assets/images/salad-tuna-pasta.jpg"
+                },
+                {
+                    id: 17,
+                    name: "Caesar Salade",
+                    ingredients: "Laitue sucrine/iceberg / tomate / Poulet / Croutons healthy / Parmesan",
+                    calories: 350,
+                    proteins: 30,
+                    price: 9000,
+                    image: "assets/images/salad-caesar.jpg"
+                },
+                {
+                    id: 18,
+                    name: "Spicy Kani Bowl",
+                    ingredients: "Riz / Kani épicé / Avocat / Concombre / Edamame / Algues / Sauce spéciale",
+                    calories: 480,
+                    proteins: 22,
+                    price: 14000,
+                    image: "assets/images/salad-spicy-kani-bowl.jpg"
+                }
+            ],
+            toasts: [],
+            desserts: [
+			 {
+                    id: 20,
+                    name: "Boost-Tella",
+                    ingredients: "Choco sans Sucre, Banane, Fruits, Granola",
+                    calories: 236,
+                    proteins: 24.2,
+                    price: 7000,
+                    image: "assets/images/bagel-choco.jpg"
+                },
+			],
+            boissons: []
+        };
+
+        // Fonction pour formater le prix en francs CFA
+        function formatPrice(price) {
+            return price.toLocaleString('fr-FR') + ' F';
+        }
+
+        // Fonction pour ajouter au panier
+        function addToCart(itemId, categoryName) {
+            const category = menuData[categoryName];
+            const item = category.find(dish => dish.id === itemId);
+            if (item) {
+                const cartItem = {
+                    ...item,
+                    category: categoryName,
+                    supplement: false,
+                    quantity: 1
+                };
+                cart.push(cartItem);
+                updateCartDisplay();
+                showNotification(`${item.name} ajouté au panier !`);
+            }
+        }
+
+        // Fonction pour ajouter un supplément
+        function addSupplement(itemId, categoryName) {
+            const category = menuData[categoryName];
+            const item = category.find(dish => dish.id === itemId);
+            if (item) {
+                const cartItem = {
+                    ...item,
+                    category: categoryName,
+                    supplement: true,
+                    supplementPrice: 2000,
+                    quantity: 1,
+                    name: item.name + " + Supplément"
+                };
+                cart.push(cartItem);
+                updateCartDisplay();
+                showNotification(`${item.name} avec supplément ajouté au panier !`);
+            }
+        }
+
+        // Fonction pour mettre à jour l'affichage du panier
+        function updateCartDisplay() {
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            const cartButton = document.querySelector('.cart-button');
+            if (cartButton) {
+                cartButton.textContent = `Panier (${cartCount})`;
+            }
+        }
+
+        // Fonction pour afficher le panier
+        function showCart() {
+            if (cart.length === 0) {
+                showNotification('Votre panier est vide');
+                return;
+            }
+
+            let cartHTML = '<div class="cart-modal"><div class="cart-content"><h3>Votre Commande</h3>';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemPrice = item.price + (item.supplement ? item.supplementPrice : 0);
+                total += itemPrice * item.quantity;
+                cartHTML += `
+                    <div class="cart-item">
+                        <span>${item.name}</span>
+                        <span>${formatPrice(itemPrice)}</span>
+                        <button onclick="removeFromCart(${index})">×</button>
+                    </div>
+                `;
+            });
+
+            cartHTML += `
+                <div class="cart-total">Total: ${formatPrice(total)}</div>
+                <div class="cart-actions">
+                    <button onclick="clearCart()">Vider le panier</button>
+                    <button onclick="sendWhatsAppOrder()">Commander via WhatsApp</button>
+                    <button onclick="closeCart()">Fermer</button>
+                </div>
+                </div></div>
+            `;
+
+            document.body.insertAdjacentHTML('beforeend', cartHTML);
+        }
+
+        // Fonction pour supprimer un article du panier
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+            closeCart();
+            if (cart.length > 0) {
+                showCart();
+            }
+        }
+
+        // Fonction pour vider le panier
+        function clearCart() {
+            cart = [];
+            updateCartDisplay();
+            closeCart();
+        }
+
+        // Fonction pour fermer le panier
+        function closeCart() {
+            const cartModal = document.querySelector('.cart-modal');
+            if (cartModal) {
+                cartModal.remove();
+            }
+        }
+
+        // Fonction pour envoyer la commande via WhatsApp
+        function sendWhatsAppOrder() {
+            if (cart.length === 0) {
+                showNotification('Votre panier est vide');
+                return;
+            }
+
+            let message = "🍽️ *Nouvelle commande Coup de Food*\n\n";
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemPrice = item.price + (item.supplement ? item.supplementPrice : 0);
+                total += itemPrice * item.quantity;
+                message += `• ${item.name}\n`;
+                message += `  Prix: ${formatPrice(itemPrice)}\n`;
+                if (item.supplement) {
+                    message += `  (avec supplément protéines)\n`;
+                }
+                message += `\n`;
+            });
+
+            message += `💰 *Total: ${formatPrice(total)}*\n\n`;
+            message += "Merci pour votre commande ! 😊";
+
+            const phoneNumber = "2250708305100";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // Vider le panier après envoi
+            clearCart();
+            showNotification('Commande envoyée via WhatsApp !');
+        }
+
+        // Fonction pour afficher une notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Fonctions du carrousel
+        function initCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            
+            if (totalSlides === 0) return;
+            
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                
+                const indicators = document.querySelectorAll('.carousel-indicator');
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(currentSlide);
+            }
+            
+            // Auto-défilement
+            function startAutoSlide() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(slideInterval);
+            }
+            
+            // Event listeners
+            document.querySelector('.carousel-next')?.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            document.querySelector('.carousel-prev')?.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            // Indicateurs
+            document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            });
+            
+            // Pause au survol
+            const carousel = document.querySelector('.carousel');
+            carousel?.addEventListener('mouseenter', stopAutoSlide);
+            carousel?.addEventListener('mouseleave', startAutoSlide);
+            
+            // Démarrer le carrousel
+            showSlide(0);
+            startAutoSlide();
+        }
+
+        // Navigation fluide
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Fonctions d'administration
+        function showAdminPanel() {
+            const adminHTML = `
+                <div class="admin-overlay">
+                    <div class="admin-panel">
+                        <button class="admin-close" onclick="closeAdminPanel()">×</button>
+                        <div id="admin-login" class="admin-section">
+                            <h3>Connexion Administrateur</h3>
+                            <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
+                                Mot de passe de démonstration : coupdefood2024
+                            </p>
+                            <input type="password" id="admin-password" placeholder="Mot de passe">
+                            <button onclick="adminLogin()">Se connecter</button>
+                        </div>
+                        <div id="admin-dashboard" class="admin-section" style="display: none;">
+                            <h3>Tableau de Bord</h3>
+                            <div class="admin-actions">
+                                <button onclick="showAddDishForm()">Ajouter un plat</button>
+                                <button onclick="exportToExcel()">Exporter Excel</button>
+                                <button onclick="showImportForm()">Importer Excel</button>
+                            </div>
+                            <div id="admin-content"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', adminHTML);
+        }
+
+        function closeAdminPanel() {
+            const overlay = document.querySelector('.admin-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+            isAdminLoggedIn = false;
+        }
+
+        function adminLogin() {
+            const password = document.getElementById('admin-password').value;
+            if (password === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+                loadAdminDashboard();
+            } else {
+                showNotification('Mot de passe incorrect');
+            }
+        }
+
+        function loadAdminDashboard() {
+            let html = '<div class="admin-dishes">';
+            
+            Object.keys(menuData).forEach(category => {
+                if (menuData[category].length > 0) {
+                    html += `<h4>${category.charAt(0).toUpperCase() + category.slice(1)}</h4>`;
+                    menuData[category].forEach(dish => {
+                        html += `
+                            <div class="admin-dish-item">
+                                <span>${dish.name} - ${formatPrice(dish.price)}</span>
+                                <div>
+                                    <button onclick="editDish('${category}', ${dish.id})">✏️</button>
+                                    <button onclick="deleteDish('${category}', ${dish.id})">🗑️</button>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            });
+            
+            html += '</div>';
+            document.getElementById('admin-content').innerHTML = html;
+        }
+
+        function showAddDishForm() {
+            const formHTML = `
+                <div class="dish-form">
+                    <h4>Ajouter un nouveau plat</h4>
+                    <select id="dish-category">
+                        <option value="bagels">Bagels</option>
+                        <option value="sandwiches">Sandwiches</option>
+                        <option value="toasts">Toasts</option>
+                        <option value="salades">Salades</option>
+                        <option value="desserts">Desserts</option>
+                        <option value="boissons">Boissons</option>
+                    </select>
+                    <input type="text" id="dish-name" placeholder="Nom du plat">
+                    <textarea id="dish-ingredients" placeholder="Ingrédients"></textarea>
+                    <input type="number" id="dish-calories" placeholder="Calories">
+                    <input type="number" id="dish-proteins" placeholder="Protéines (g)">
+                    <input type="number" id="dish-price" placeholder="Prix (F)">
+                    <input type="text" id="dish-image" placeholder="Chemin de l'image">
+                    <div class="form-actions">
+                        <button onclick="addDish()">Ajouter</button>
+                        <button onclick="loadAdminDashboard()">Annuler</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('admin-content').innerHTML = formHTML;
+        }
+
+        function addDish() {
+            const category = document.getElementById('dish-category').value;
+            const name = document.getElementById('dish-name').value;
+            const ingredients = document.getElementById('dish-ingredients').value;
+            const calories = parseInt(document.getElementById('dish-calories').value) || 0;
+            const proteins = parseFloat(document.getElementById('dish-proteins').value) || 0;
+            const price = parseInt(document.getElementById('dish-price').value) || 0;
+            const image = document.getElementById('dish-image').value;
+
+            if (!name || !ingredients || !price) {
+                showNotification('Veuillez remplir tous les champs obligatoires');
+                return;
+            }
+
+            const newId = Math.max(...Object.values(menuData).flat().map(item => item.id || 0)) + 1;
+            
+            const newDish = {
+                id: newId,
+                name,
+                ingredients,
+                calories,
+                proteins,
+                price,
+                image: image || 'assets/images/default.jpg'
+            };
+
+            menuData[category].push(newDish);
+            saveMenuData();
+            renderMenu();
+            loadAdminDashboard();
+            showNotification('Plat ajouté avec succès');
+        }
+
+        function editDish(category, dishId) {
+            const dish = menuData[category].find(item => item.id === dishId);
+            if (!dish) return;
+
+            const formHTML = `
+                <div class="dish-form">
+                    <h4>Modifier le plat</h4>
+                    <select id="dish-category">
+                        <option value="bagels" ${category === 'bagels' ? 'selected' : ''}>Bagels</option>
+                        <option value="sandwiches" ${category === 'sandwiches' ? 'selected' : ''}>Sandwiches</option>
+                        <option value="toasts" ${category === 'toasts' ? 'selected' : ''}>Toasts</option>
+                        <option value="salades" ${category === 'salades' ? 'selected' : ''}>Salades</option>
+                        <option value="desserts" ${category === 'desserts' ? 'selected' : ''}>Desserts</option>
+                        <option value="boissons" ${category === 'boissons' ? 'selected' : ''}>Boissons</option>
+                    </select>
+                    <input type="text" id="dish-name" value="${dish.name}" placeholder="Nom du plat">
+                    <textarea id="dish-ingredients" placeholder="Ingrédients">${dish.ingredients}</textarea>
+                    <input type="number" id="dish-calories" value="${dish.calories}" placeholder="Calories">
+                    <input type="number" id="dish-proteins" value="${dish.proteins}" placeholder="Protéines (g)">
+                    <input type="number" id="dish-price" value="${dish.price}" placeholder="Prix (F)">
+                    <input type="text" id="dish-image" value="${dish.image}" placeholder="Chemin de l'image">
+                    <div class="form-actions">
+                        <button onclick="updateDish('${category}', ${dishId})">Sauvegarder</button>
+                        <button onclick="loadAdminDashboard()">Annuler</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('admin-content').innerHTML = formHTML;
+        }
+
+        function updateDish(oldCategory, dishId) {
+            const newCategory = document.getElementById('dish-category').value;
+            const name = document.getElementById('dish-name').value;
+            const ingredients = document.getElementById('dish-ingredients').value;
+            const calories = parseInt(document.getElementById('dish-calories').value) || 0;
+            const proteins = parseFloat(document.getElementById('dish-proteins').value) || 0;
+            const price = parseInt(document.getElementById('dish-price').value) || 0;
+            const image = document.getElementById('dish-image').value;
+
+            if (!name || !ingredients || !price) {
+                showNotification('Veuillez remplir tous les champs obligatoires');
+                return;
+            }
+
+            // Trouver et supprimer l'ancien plat
+            const dishIndex = menuData[oldCategory].findIndex(item => item.id === dishId);
+            if (dishIndex === -1) return;
+
+            const updatedDish = {
+                id: dishId,
+                name,
+                ingredients,
+                calories,
+                proteins,
+                price,
+                image: image || 'assets/images/default.jpg'
+            };
+
+            // Supprimer de l'ancienne catégorie
+            menuData[oldCategory].splice(dishIndex, 1);
+            
+            // Ajouter à la nouvelle catégorie
+            menuData[newCategory].push(updatedDish);
+
+            saveMenuData();
+            renderMenu();
+            loadAdminDashboard();
+            showNotification('Plat modifié avec succès');
+        }
+
+        function deleteDish(category, dishId) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer ce plat ?')) {
+                const dishIndex = menuData[category].findIndex(item => item.id === dishId);
+                if (dishIndex !== -1) {
+                    menuData[category].splice(dishIndex, 1);
+                    saveMenuData();
+                    renderMenu();
+                    loadAdminDashboard();
+                    showNotification('Plat supprimé avec succès');
+                }
+            }
+        }
+
+        function exportToExcel() {
+            let csvContent = "Catégorie,Nom,Ingrédients,Calories,Protéines,Prix,Image\n";
+            
+            Object.keys(menuData).forEach(category => {
+                menuData[category].forEach(dish => {
+                    csvContent += `"${category}","${dish.name}","${dish.ingredients}",${dish.calories},${dish.proteins},${dish.price},"${dish.image}"\n`;
+                });
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'menu_coup_de_food.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showNotification('Menu exporté avec succès');
+        }
+
+        function showImportForm() {
+            const formHTML = `
+                <div class="import-form">
+                    <h4>Importer un menu Excel (CSV)</h4>
+                    <p>Format requis : Catégorie,Nom,Ingrédients,Calories,Protéines,Prix,Image</p>
+                    <input type="file" id="csv-file" accept=".csv" onchange="handleFileSelect(event)">
+                    <div class="form-actions">
+                        <button onclick="loadAdminDashboard()">Annuler</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('admin-content').innerHTML = formHTML;
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    importFromCSV(e.target.result);
+                } catch (error) {
+                    showNotification('Erreur lors de l\'import : ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function importFromCSV(csvText) {
+            const lines = csvText.split('\n');
+            const headers = lines[0].split(',');
+            
+            // Réinitialiser les données
+            Object.keys(menuData).forEach(key => {
+                menuData[key] = [];
+            });
+
+            let newId = 1;
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const values = parseCSVLine(line);
+                if (values.length < 6) continue;
+                
+                const category = values[0].replace(/"/g, '').toLowerCase();
+                const name = values[1].replace(/"/g, '');
+                const ingredients = values[2].replace(/"/g, '');
+                const calories = parseInt(values[3]) || 0;
+                const proteins = parseFloat(values[4]) || 0;
+                const price = parseInt(values[5]) || 0;
+                const image = values[6] ? values[6].replace(/"/g, '') : 'assets/images/default.jpg';
+                
+                if (menuData[category]) {
+                    menuData[category].push({
+                        id: newId++,
+                        name,
+                        ingredients,
+                        calories,
+                        proteins,
+                        price,
+                        image
+                    });
+                }
+            }
+            
+            saveMenuData();
+            renderMenu();
+            loadAdminDashboard();
+            showNotification('Menu importé avec succès');
+        }
+
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current);
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            result.push(current);
+            return result;
+        }
+
+        // Sauvegarde et chargement des données
+        function saveMenuData() {
+            localStorage.setItem('coupDeFoodMenu', JSON.stringify(menuData));
+        }
+
+        function loadMenuData() {
+            const saved = localStorage.getItem('coupDeFoodMenu');
+            if (saved) {
+                menuData = JSON.parse(saved);
+            }
+        }
+
+        // Rendu du menu
+        function renderMenu() {
+            Object.keys(menuData).forEach(category => {
+                const section = document.getElementById(category);
+                if (!section) return;
+                
+                const dishesContainer = section.querySelector('.dishes-grid');
+                if (!dishesContainer) return;
+                
+                dishesContainer.innerHTML = '';
+                
+                menuData[category].forEach(dish => {
+                    const dishElement = document.createElement('div');
+                    dishElement.className = 'dish-card';
+                    dishElement.innerHTML = `
+                        <img src="${dish.image}" alt="${dish.name}" onerror="this.src='assets/images/default.jpg'">
+                        <div class="dish-info">
+                            <h4>${dish.name}</h4>
+                            <p class="ingredients">${dish.ingredients}</p>
+                            <div class="nutrition">
+                                <span>🔥 ${dish.calories} cal</span>
+                                <span>💪 ${dish.proteins}g protéines</span>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="price">${formatPrice(dish.price)}</span>
+                                <div class="dish-actions">
+                                    <button onclick="addToCart(${dish.id}, '${category}')" class="btn-order">Commander</button>
+                                    <button onclick="addSupplement(${dish.id}, '${category}')" class="btn-supplement">+ Protéines (+2000 F)</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    dishesContainer.appendChild(dishElement);
+                });
+            });
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMenuData();
+            renderMenu();
+            initCarousel();
+            
+            // Ajouter le bouton panier
+            const header = document.querySelector('header .nav-links');
+            if (header) {
+                const cartButton = document.createElement('button');
+                cartButton.className = 'cart-button';
+                cartButton.textContent = 'Panier (0)';
+                cartButton.onclick = showCart;
+                header.appendChild(cartButton);
+            }
+            
+            updateCartDisplay();
+        });
+    </script>
+</body>
+</html>
+
