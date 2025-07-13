@@ -1022,24 +1022,27 @@
             });
         }
 
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            loadMenuData();
-            renderMenu();
-            initCarousel();
-            
-            // Ajouter le bouton panier
-            const header = document.querySelector('header .nav-links');
-            if (header) {
-                const cartButton = document.createElement('button');
-                cartButton.className = 'cart-button';
-                cartButton.textContent = 'Panier (0)';
-                cartButton.onclick = showCart;
-                header.appendChild(cartButton);
-            }
-            
-            updateCartDisplay();
-        });
+// Initialisation
+document.addEventListener('DOMContentLoaded', function () {
+    loadMenuData();
+    renderMenu();
+    initCarousel();
+
+    // Créer un conteneur pour le bouton flottant
+    const cartBubble = document.createElement('button');
+    cartBubble.className = 'cart-bubble'; // Utilisez la classe définie dans le CSS
+    cartBubble.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+            <path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5.672-1.5 1.5-1.5 1.5.671 1.5 1.5zm3.5-1.5c-.829 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm5.125-7.375l-1.875-6.125c-.094-.313-.406-.5-.719-.5h-6.25c-.313 0-.625.188-.719.5l-1.875 6.125c-.094.313-.063.625-.063.938v7.75c0 .552.448 1 1 1h14c.552 0 1-.448 1-1v-7.75c0-.313-.188-.625-.438-.938zm-4.875-5.5c0 .406-.344.75-.75.75s-.75-.344-.75-.75.344-.75.75-.75.75.344.75.75zm3.75 8.25h-10v-7.125l2-6.25h6l2 6.25v7.125z"/>
+        </svg>
+    `;
+    cartBubble.onclick = showCart;
+
+    // Ajouter le bouton flottant au body
+    document.body.appendChild(cartBubble);
+
+    updateCartDisplay();
+});
     </script>
 </body>
 </html>
